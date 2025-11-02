@@ -132,6 +132,12 @@ body.profile .container img:hover {
   border-bottom: none;
 }
 
+/* 戻るボタンを中央配置 */
+.back-btn-container {
+  text-align: center; /* ボタンを中央寄せ */
+  margin-top: 30px;   /* 上に少し余白を取る */
+}
+
 /* 戻るボタン */
 .back-btn {
   background-color: #0078d7;
@@ -150,6 +156,7 @@ body.profile .container img:hover {
   background-color: #005fa3;
   transform: translateY(-2px);
 }
+
 
 /* =========================
    📱 スマホ対応

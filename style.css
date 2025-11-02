@@ -1,48 +1,197 @@
+/* =========================
+   🌿 ベーススタイル
+========================= */
 body {
-      font-family: "Helvetica Neue", Arial, sans-serif;
-      background-color: #fafafa;
-      color: #333;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      flex-direction: column;
-      height: 100vh;
+  font-family: "Helvetica Neue", Arial, sans-serif;
+  background-color: #fafafa;
+  color: #333;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 20px;
+  margin: 0;
+  min-height: 100vh;
 }
 
-table {
-      border-collapse: collapse;
-      width: 700px;
-      background-color: #fff;
-      box-shadow: 0 2px 6px rgba(0,0,0,0.1);
-      border-radius: 10px;
-      overflow: hidden;
-}
-caption {
-      font-size: 1.4em;
-      font-weight: bold;
-      margin-bottom: 10px;
-      padding: 10px;
-}
-th, td {
-      padding: 14px 16px;
-      text-align: left;
-      border-bottom: 1px solid #eee;
-}
-th {
-      width: 35%;
-      background-color: #f7f7f7;
-      font-weight: bold;
-}
-tr:last-child td {
-      border-bottom: none;
+header h1 {
+  text-align: center;
+  font-size: 2em;
+  color: #333;
+  margin-bottom: 0;
 }
 
-.container {
-      text-align: center;
+.subtitle {
+  color: #666;
+  font-size: 1em;
+  margin-top: 4px;
+  margin-bottom: 30px;
 }
 
-.container img {
-  width: 32%;         /* 画像の幅を親要素に対して50%に縮小 */
-  height: auto;       /* アスペクト比を維持 */
-  margin: 10px 0;
+a {
+  color: #0078d7;
+  text-decoration: none;
+}
+a:hover {
+  text-decoration: underline;
+}
+
+footer {
+  margin-top: 50px;
+  color: #888;
+  font-size: 0.9em;
+}
+
+/* =========================
+   🌈 トップページ（home）
+========================= */
+body.home {
+  background: linear-gradient(135deg, #f0f4ff, #ffffff);
+  justify-content: center;
+  text-align: center;
+}
+
+.intro p {
+  font-size: 1.1em;
+  margin: 6px 0;
+}
+
+/* ボタン風リンク */
+.btn {
+  display: inline-block;
+  background-color: #0078d7;
+  color: #fff;
+  padding: 12px 28px;
+  border-radius: 25px;
+  text-decoration: none;
+  font-size: 1.1em;
+  font-weight: bold;
+  transition: all 0.3s ease;
+  margin-top: 20px;
+  box-shadow: 0 3px 6px rgba(0,0,0,0.15);
+}
+.btn:hover {
+  background-color: #005fa3;
+  transform: translateY(-2px);
+}
+
+/* =========================
+   💎 プロフィールページ
+========================= */
+body.profile {
+  background: linear-gradient(135deg, #f0f4ff, #ffffff);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 20px;
+  color: #333;
+}
+
+body.profile .container {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+body.profile .container img {
+  width: 160px;
+  height: auto;
+  border-radius: 50%;
+  box-shadow: 0 3px 6px rgba(0,0,0,0.15);
+  margin-bottom: 20px;
+  transition: transform 0.3s ease;
+}
+body.profile .container img:hover {
+  transform: scale(1.05);
+}
+
+.profile-table {
+  border-collapse: collapse;
+  width: 100%;
+  max-width: 700px;
+  background-color: #fff;
+  border-radius: 12px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+  overflow: hidden;
+  margin-bottom: 40px;
+}
+
+.profile-table th,
+.profile-table td {
+  padding: 14px 18px;
+  border-bottom: 1px solid #eee;
+  text-align: left;
+}
+
+.profile-table th {
+  width: 35%;
+  background-color: #f9f9f9;
+  font-weight: bold;
+  color: #555;
+}
+
+.profile-table tr:last-child td {
+  border-bottom: none;
+}
+
+/* 戻るボタン */
+.back-btn {
+  background-color: #0078d7;
+  color: white;
+  border-radius: 25px;
+  padding: 12px 30px;
+  text-decoration: none;
+  font-weight: bold;
+  box-shadow: 0 3px 6px rgba(0,0,0,0.15);
+  transition: all 0.3s ease;
+  display: inline-block;
+  text-align: center;
+}
+
+.back-btn:hover {
+  background-color: #005fa3;
+  transform: translateY(-2px);
+}
+
+/* =========================
+   📱 スマホ対応
+========================= */
+@media (max-width: 600px) {
+  body {
+    padding: 10px;
+  }
+
+  header h1 {
+    font-size: 1.8em;
+  }
+
+  .subtitle {
+    font-size: 0.95em;
+  }
+
+  .btn,
+  .back-btn {
+    width: 80%;
+    font-size: 1em;
+  }
+
+  body.profile .container img {
+    width: 60%;
+    max-width: 150px;
+  }
+
+  .profile-table th,
+  .profile-table td {
+    display: block;
+    width: 100%;
+  }
+
+  .profile-table tr {
+    display: block;
+    margin-bottom: 12px;
+  }
+
+  .profile-table th {
+    background-color: #eef2ff;
+    border-bottom: none;
+    padding-top: 12px;
+  }
 }
